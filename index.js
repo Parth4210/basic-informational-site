@@ -1,6 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 
+const PORT = process.env.PORT || 8080;
+
 let filename;
 let statusCode = 200;
 
@@ -29,4 +31,4 @@ http.createServer((req, res) => {
             res.end(data);
         });
 
-}).listen(8080);
+}).listen(PORT);
